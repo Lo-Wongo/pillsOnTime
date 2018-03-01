@@ -1,5 +1,3 @@
-INSERT INTO users
-(phone )
-VALUES
-($1)
+UPDATE users set phone = $1
+where id = $2
 RETURNING *; 

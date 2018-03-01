@@ -44,7 +44,6 @@ class PatientRecords extends Component {
     }
 
     render() {
-        console.log("Hello");
         const patient = this.state.patient
         const meds = this.state.meds.map((med, i) => {
             return (
@@ -54,7 +53,7 @@ class PatientRecords extends Component {
 
         return (
             <div>
-                <div className="patient-list">
+                <div className="patient-name">
                     <h3>Patient Name: {patient.patient_name}</h3>
                 </div>
                 <p>Current Medications</p>

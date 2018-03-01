@@ -22,6 +22,8 @@ const {
 //Top-level middleware
 const app = express();
 
+app.use( express.static( `${__dirname}/../build` ) );
+
 //to make sure req.body exists
 app.use(express.json() );
 
@@ -87,7 +89,7 @@ passport.deserializeUser( (id, done) => {
 //authentication endpoints
 app.get('/auth', passport.authenticate('auth0'));//when a user hit the login button to kick off authentication
 app.get('/auth/callback',passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#/patients'
+    successRedirect: process.env.REACT_APP_AUTHSUCCESSREDIRECT
 }))
 //and get redirected to callback which inturn redirects user to front-end
 
@@ -103,7 +105,7 @@ app.get('/auth/me', (req, res) => {
 
 app.get('/logout', (req, res) => {
     req.logout();
-    res.redirect('http://localhost:3000/')//redirects user to the home page after logout
+    res.redirect(process.env.REACT_APP_REDIRECT)//redirects user to the home page after logout
 }) 
 
 //=====household endpoints========

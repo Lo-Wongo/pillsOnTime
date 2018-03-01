@@ -1,6 +1,8 @@
 .patient-list{
     margin: 0 500px;
     margin-bottom: 20px;
+    height: 80vh;
+    overflow-y: scroll;
     
 }
 

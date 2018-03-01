@@ -45,3 +45,14 @@ footer {
     box-shadow: black 0.5em 0.5em 0.3em;
     margin-top: 100px;
 }
+
+.bg-div {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 200px);
+  
+}
+
+.bg-div img {
+  width: 80%
+}

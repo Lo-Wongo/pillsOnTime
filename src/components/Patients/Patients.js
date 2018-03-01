@@ -3,6 +3,7 @@ import Households from '../Households/Households';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect} from 'react-redux';
+import { getUser } from '../../ducks/reducer';
 
 import './Patients.css'
 
@@ -39,6 +40,9 @@ class Patients extends Component {
                 this.setState({phoneModal:true})
             }
         }
+        if(nextProps.user && nextProps.user.phone) {
+            this.setState({phoneModal: false})
+        }
     }
 
     getPatients(hh_id){
@@ -56,6 +60,7 @@ class Patients extends Component {
         let body = {phone: this.state.phoneInput}
         axios.put('/api/user/phone', body).then( (res) => {
             console.log(res.data)
+            this.props.getUser();
         }).catch(console.log)
     }
 
@@ -101,4 +106,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps)(Patients);
+export default connect(mapStateToProps, {getUser})(Patients);

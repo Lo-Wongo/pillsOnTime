@@ -74,7 +74,7 @@ class NewPatient extends Component {
                         </div>
                     </div>
                     <div className="allegies">
-                        <p>Allegies <br /> <textarea name="allegiesInput" onChange={(event) => this.handleInput(event)} type="text" value={this.state.allegiesTextarea} /> </p>
+                        <h5>Known Allegies <br /> <textarea name="allegiesInput" onChange={(event) => this.handleInput(event)} type="text" value={this.state.allegiesTextarea} /> </h5>
                     </div><br />
                     <button className="add-button" onClick={() =>this.onSubmit() }>Add Patient</button>
                 </div>

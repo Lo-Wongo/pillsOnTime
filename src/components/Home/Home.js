@@ -23,14 +23,14 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <div>
+                <div className="bg-div">
                     <img src={ abstract } className="abstract" alt="abstract" />
                 </div>
                 
                 <div className="form">
-                    <a href="http://localhost:3007/auth"><button className="new-user-btn">New User</button></a>
+                    <a href={process.env.REACT_APP_LOGIN}><button className="new-user-btn">New User</button></a>
                     <br />
-                    <a href="http://localhost:3007/auth"><button className="login-btn">Login</button></a>
+                    <a href={process.env.REACT_APP_LOGIN}><button className="login-btn">Login</button></a>
                 </div> 
                 
             </div> 

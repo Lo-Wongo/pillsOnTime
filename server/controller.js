@@ -30,7 +30,7 @@ module.exports = {
         let hh_id = req.user.id
         let {phone} = req.body;
         console.log(req.body);
-        req.app.get('db').patients.add_phone(phone). then((response) =>{
+        req.app.get('db').patients.add_phone(phone, hh_id). then((response) =>{
             console.log(response);
             res.status(200).send(response)
 
