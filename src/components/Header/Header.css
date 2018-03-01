@@ -1,0 +1,46 @@
+.nav {
+    background-color: azure;
+    border: 1px;
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    justify-items: center;
+    align-items: center;
+    height: 100px;
+    position: relative;
+    width: 100%;
+}
+
+.nav h1 {
+    color: goldenrod;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.show {
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:300px;
+    background-color:greenyellow;
+    transition: .6s;
+    overflow: hidden;
+    width: 150px;
+    margin-top: 20px;
+}
+.notshow {
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:0;
+    background-color: greenyellow;
+    transition: .6s;
+    overflow: hidden;
+    width: 150px;
+    margin-top: 20px;
+}

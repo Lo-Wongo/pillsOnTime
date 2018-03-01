@@ -1,0 +1,22 @@
+.current-meds {
+    background-color: goldenrod;
+    padding: 5px;
+    margin: 0 500px;
+    border: 1px solid black;
+    transition: .6s;
+    overflow: hidden; 
+  
+}
+
+.add-med-btn {
+    padding: 5px;
+    margin: 0 600px;
+}
+
+h3 {
+    margin-top: 25px;
+}
+
+.med {
+    border: 1px solid white;
+}

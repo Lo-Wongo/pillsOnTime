@@ -1,0 +1,31 @@
+h5 {
+    margin-top: 50px;
+}
+
+.main-container {
+    margin-top: 50px;
+    background-color: goldenrod;
+    border: 1px solid white;
+    margin: 0 500px;
+    height: 70vh;
+   
+}
+
+.add-button {
+    background-color: deeppink;
+    border-radius: 1em;
+    width: 250px;
+    transform: translateY(4px);
+    box-shadow: black 0.5em 0.5em 0.3em;
+}
+
+.address-container {
+}
+
+.allegies {
+}
+
+.personal-info {
+    margin-top: 30px;
+}
+
