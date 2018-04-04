@@ -52,16 +52,16 @@ class NewPatient extends Component {
     render() {
         let patient = this.state.patient
         return (
-            <div>
+            <div className="patient">
                 <h5>Add New Patient</h5> <br />
                 <div className="main-container">
                     <div className="personal-info">
-                        Name <input name="nameInput" onChange={(event) => this.handleInput(event)} type="text" value={this.state.nameInput} /> 
-                        Date of Birth <input name="dobInput" onChange={(event) => this.handleInput(event)} type="text" value={this.state.dobInput} />
+                        <p>Name <br/><input name="nameInput" onChange={(event) => this.handleInput(event)} type="text" value={this.state.nameInput} /></p> 
+                        <p>Date of Birth <br/><input name="dobInput" onChange={(event) => this.handleInput(event)} type="text" value={this.state.dobInput} /> </p>
                     </div>
                     <div>
                         <br />
-                        <h5>Address</h5>
+                        <h6>Address</h6>
                         <div className="address-container"> 
                             <div className="address-one">
                                 Street <input name="streetInput" onChange={(event) => this.handleInput(event)} type="text" value={this.state.streetInput} />
@@ -74,7 +74,7 @@ class NewPatient extends Component {
                         </div>
                     </div>
                     <div className="allegies">
-                        <h5>Known Allegies <br /> <textarea name="allegiesInput" onChange={(event) => this.handleInput(event)} type="text" value={this.state.allegiesTextarea} /> </h5>
+                        <h6>Known Allergies <br /> <textarea name="allergiesInput" onChange={(event) => this.handleInput(event)} type="text" value={this.state.allegiesTextarea} /> </h6>
                     </div><br />
                     <button className="add-button" onClick={() =>this.onSubmit() }>Add Patient</button>
                 </div>

@@ -1,14 +1,24 @@
 .patient-list{
     margin: 0 500px;
+    margin-top: 30px;
     margin-bottom: 20px;
-    height: 80vh;
-    overflow-y: scroll;
+    height: 60vh;
+    /* overflow-y: scroll; */
+    width: 500px;
     
 }
 
 .pat-tile {
-    background-color: goldenrod;
+    background-color: greenyellow;
     padding: 5px;
     margin: 5px;
     border: 1px solid black;
+}
+
+.sub-btn {
+    background-color: deeppink;
+    border-radius: 1em;
+    width: 250px;
+    transform: translateY(4px);
+    box-shadow: black 0.5em 0.5em 0.3em;
 }

@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-image: url("images/medical.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
 }
 
 .App-logo {
@@ -25,4 +30,8 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.app-comp {
+  width: 100vw;
 }

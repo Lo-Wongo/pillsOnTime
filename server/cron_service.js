@@ -23,7 +23,7 @@ function cronSrv(db){
     }
 
     //=====Minus 10 cron function===== seconds, minutes, hours, day of 
-    let minusTen = new CronJob('0 08 * * * *', function() {
+    let minusTen = new CronJob('0 50 * * * *', function() {
         console.log('You will see this message minute 50');
         // sendNotifications(true)
         sendNotifications(true)
@@ -31,7 +31,7 @@ function cronSrv(db){
 
 
     //=====onTime 10 cron function=====
-    let onTime = new CronJob('0 09 * * * *', function() {
+    let onTime = new CronJob('0 00 * * * *', function() {
         console.log('You will see this message minute 0');
         sendNotifications(false)
     }, null, true, 'America/Denver');

@@ -104,7 +104,34 @@ module.exports = {
 
         }).catch(console.log);
     },
+
+//=========reminders controller==========
+
+    addSelectedHours: (req, res) => {
+        let hh_id = req.user.id;
+        let { reminder_time, patient_id, med_name, med_strength} = req.body;
+        console.log('check out my bod',req.body);
+        const db = req.app.get('db')
+
+        db.medications.create_medication(med_name, med_strength, patient_id).then((medres) => {
+            let med_id = medres[0].id;
+
+            let filteredReminders = reminder_time.filter((r) => {
+                return r.selected
+            })
+            let stack = [];
+            for(var i =0; i< filteredReminders.length; i++) {
+                let reminder = filteredReminders[i];
+                let x = reminder.hour.split(":00");
+                let h = x [1] === "pm" ? x[0]*1 +12 : x[0]*1 //takes care of everything except mid night and noon
+                h = !( h % 12) ? h - 12 : h; //Takes care of noon and midnight 
+                stack.push(db.reminders.reminder_hour(hh_id, h, med_id))
+            }
+    
+            Promise.all(stack).then((response) => {
+                console.log(response);
+                res.status(200).send(response);
+            }).catch(console.log);
+        }).catch(console.log)
+    }
 }
-
-
-

@@ -76,7 +76,7 @@ class Patients extends Component {
                     {patients}
                 </div>
                 <div>
-                    <Link to="/newpatient"><button>Add New Patient</button></Link>
+                    <Link to="/newpatient"><button className="sub-btn">Add New Patient</button></Link>
                 </div> <br />
 
                 {

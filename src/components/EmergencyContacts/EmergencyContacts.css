@@ -1,0 +1,58 @@
+.personalInfo {
+    margin: 40px;
+    background-color: blueviolet;
+  }
+  
+  .App {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .contactWrapper {
+    border: 1px solid black;
+    background-color: aqua;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    width: 95vw;
+    margin: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .contactItem {
+    margin: 10px;
+  }
+  
+  .contact {
+    background-color: plum;
+    margin: 20px;
+  }
+  
+  .submit {
+    width: 100px;
+  }
+
+  .emerg-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .add-contact {
+    background-color: aqua;
+  }
+
+  .emergency-contacts {
+    margin: 0 400px;
+    background-color: goldenrod;
+    height: 30vh;
+  }
+
+  .emergency h5 {
+    background-color: aqua;
+    margin: 0 400px;
+    margin-top: 30px;
+  }

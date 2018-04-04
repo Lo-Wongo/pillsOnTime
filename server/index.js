@@ -119,13 +119,18 @@ app.put('/api/user/phone', controller.addPhone)
 
 //======medication endpoints=====
 app.post('/api/medication', controller.addMedication)
-app.get('/api/medication/:id', controller.getMedication)
+app.get('/api/medication/:id', controller.getMedication)//returns specific medication based on passed in id
 app.put('/api/medication/:id', controller.editMedication)
 app.delete('/api/medication/:id', controller.deleteMedication)
 app.get('/api/individualrecords/:id', controller.getPatientMedications)
 
 //======schedule dosage endpoints=======
 app.post('/api/dosagelog', controller.scheduleDosage)
+
+
+//======reminders endpoints=======
+app.post('/api/hours', controller.addSelectedHours);
+
 
 
 

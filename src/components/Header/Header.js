@@ -26,7 +26,7 @@ class Header extends Component {
                     <div className={this.state.show ? "show" : "notshow"}>
                         <Link className="menu-button" to="/">Home</Link>
                         <Link className="menu-button" to="/patients">Patients</Link>
-                        <Link className="menu-button" to="/newmedication">Add Meds</Link>
+                        <Link className="menu-button" to="/newmedication">New Medications</Link>
                         <Link className="menu-button" to="/patientrecords">Patient Records</Link>
                     </div>
                 </nav>

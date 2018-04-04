@@ -1,8 +1,28 @@
 .dosage_modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: goldenrod;
-    margin-top: 56px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: goldenrod;
+  margin-top: 30px;
+  /* width: 500px; */
+  height: 80vh;
+  overflow-y: scroll;
   }
+
+.dosage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.select-box {
+  height: 30px;
+}
+
+
+.hours-select {
+  margin: 0 150px;
+}

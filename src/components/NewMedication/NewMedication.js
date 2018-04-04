@@ -68,7 +68,7 @@ class NewMedication extends Component {
         }).catch(console.log)
       }
     
-      updateMedication(){
+        updateMedication(){
           let body = {
               med_name: this.state.med_name,
               med_strength: this.state.med_strength,
@@ -81,12 +81,12 @@ class NewMedication extends Component {
           }).catch(console.log)
        }
 
-  deleteMedication(){
-      console.log(this.props.match.params.id);
-      axios.delete(`/api/medication/${this.props.match.params.id}`).then(response => {
-         this.props.history.push('/patientrecords')//routes to patientrecords
-      }).catch(console.log)
-  }
+        deleteMedication(){
+            console.log(this.props.match.params.id);
+            axios.delete(`/api/medication/${this.props.match.params.id}`).then(response => {
+                this.props.history.push('/patientrecords')//routes to patientrecords
+            }).catch(console.log)
+        }
   
 
 //This passes showModal={true} to the Modal component (DosageLog) and it’s rendered
@@ -111,14 +111,14 @@ class NewMedication extends Component {
     render() {
         let medication = this.state.medication;
         return (
-            <div>
+            <div className="new-meds">
 
                     {
                         this.state.showModal
                         ?
                         //Here 3 props and their values (id, submitModal, cancelModal)are being created to be sent to the DosageLog component
                         //they become available in the DosageLog component as ${this.props.id or submitModal, or cancelModal}
-                        <DosageLog id={ this.props.match.params.id } submitModal={this.submitModal} cancelModal={this.cancelModal} ></DosageLog>
+                        <DosageLog id={ this.props.match.params.id } med_name={this.state.nameInput} med_strength={this.state.strengthInput} submitModal={this.submitModal} cancelModal={this.cancelModal} ></DosageLog>
                         :
                         null
                     }
@@ -139,8 +139,7 @@ class NewMedication extends Component {
                             <button onClick={ () => this.showModal() }>Scheduled dosage</button>
                         </div>
                     </div>
-                </div>
-                <br />
+                </div><br />
 
                 <div>
                     <button className="edit-btn" onClick={ () => this.onSubmit() }>Edit</button>

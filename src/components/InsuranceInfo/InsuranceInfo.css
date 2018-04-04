@@ -1,0 +1,23 @@
+.insurance {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 80vh;
+}
+
+.medical-container {
+    margin: 0 500px;
+    background-color: chartreuse;
+    
+}
+
+.dental-container {
+    /* margin: 0 500px; */
+    background-color: goldenrod;
+    justify-content: space-around;
+}
+
+.med-insurance {
+    display: flex;
+    justify-content: space-around;
+}

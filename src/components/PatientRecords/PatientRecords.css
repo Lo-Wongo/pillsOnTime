@@ -1,5 +1,5 @@
 .current-meds {
-    background-color: goldenrod;
+    background-color: greenyellow;
     padding: 5px;
     margin: 0 500px;
     border: 1px solid black;
@@ -9,8 +9,11 @@
 }
 
 .add-med-btn {
-    padding: 5px;
-    margin: 0 600px;
+    background-color: deeppink;
+    border-radius: 1em;
+    width: 250px;
+    transform: translateY(4px);
+    box-shadow: black 0.5em 0.5em 0.3em;
 }
 
 h3 {

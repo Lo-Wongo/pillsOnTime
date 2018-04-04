@@ -14,6 +14,11 @@ import DosageLog from './components/DosageLog/DosageLog';
 import PatientRecords from './components/PatientRecords/PatientRecords';
 import {connect} from 'react-redux'
 import {getUser} from './ducks/reducer'
+import Doctor from './components/Doctor/Doctor';
+import EmergencyContacts from './components/EmergencyContacts/EmergencyContacts';
+import SneakPeak from './components/SneakPeak/SneakPeak';
+import InsuranceInfo from './components/InsuranceInfo/InsuranceInfo';
+// import Footer from './components/Footer/Footer';
 
 class App extends Component {
   componentDidMount(){
@@ -23,7 +28,7 @@ class App extends Component {
     return (
       <div className="App">
       <HashRouter>
-        <div>
+        <div className="app-comp">
       < Header />
         <Switch>
           < Route path='/header' component={ Header }/>
@@ -35,13 +40,16 @@ class App extends Component {
           < Route path='/patients' component={ Patients }/>
           < Route path='/patientrecords/:id' component={ PatientRecords }/>
           < Route path='/dosagelog' component={ DosageLog }/>
+          < Route path='/doctor' component={ Doctor }/>
+          < Route path='/emergencycontacts' component={ EmergencyContacts }/>
+          < Route path='/insuranceinfo' component={ InsuranceInfo }/>
+          < Route path='/sneakpeak' component={ SneakPeak }/>
+          {/* < Route path='/footer' component={ Footer }/> */}
           < Route path='/' component={ Home } />
         </Switch>
         </div>
       </HashRouter>
       </div>
-
-    
     );
   }
 }
